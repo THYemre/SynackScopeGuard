@@ -1,4 +1,3 @@
-# Developed by THYemre
 import argparse
 import signal
 import sys
@@ -16,6 +15,8 @@ class Colors:
     MAGENTA = '\033[95m'
     CYAN = '\033[96m'
     RESET = '\033[0m'
+
+user_packet_count = 5
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Capture traffic to specified hostnames, resolving them to IPs.")
@@ -83,7 +84,7 @@ def packet_callback(packet, target_ips, exclude_ips, wildcard_patterns, packet_c
                 break
 
         if dst_ip in target_ips and dst_ip not in exclude_ips:
-            if packet_count[dst_ip] % 100 == 0:
+            if packet_count[dst_ip] % user_packet_count == 0:
                 print(f"{Colors.CYAN}Packet count for {dst_ip}: {packet_count[dst_ip]}{Colors.RESET} - {Colors.GREEN}Captured Packet: {packet.summary()}{Colors.RESET}")
                 if packet.haslayer(Raw):
                     payload = bytes(packet[Raw].load)
