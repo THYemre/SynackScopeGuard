@@ -129,5 +129,3 @@ This will ensure that the script runs each time your computer starts up.
 ## Disclaimer
 
 This tool is intended for use on the Synack Red Team platform or other environments where you have explicit permission to test. Unauthorized use may violate the platform's terms of service or the law.
-
-The name **SynackScopeGuard** reflects its purpose of guarding the scope of Synack Red Team engagements by preventing interactions with out-of-scope assets. The README provides clear usage instructions, features, and installation steps to help users get started quickly and understand the functionality of the script. Let me know if you'd like to make any adjustments!
