@@ -1,8 +1,1 @@
-scapy
-argparse
-signal
-sys
-os
-platform
-socket
-re
+scapy==2.6.1
